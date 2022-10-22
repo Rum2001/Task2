@@ -9,6 +9,177 @@
     --color-bg7:#e48f92;
     --color-bg8:#6dbcc5;
 }
+@keyframes Start {
+    0% {
+        visibility: hidden
+    }
+
+    to {
+        visibility: visible
+    }
+}
+
+@keyframes Preloader {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes Blur {
+    0% {
+        filter: none
+    }
+
+    to {
+        filter: blur(10px)
+    }
+}
+
+@keyframes StrokeAni {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes DrawStroke {
+    to {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 800
+    }
+}
+
+@keyframes ScrollStroke {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,100%,0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0)
+    }
+}
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%,0,0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0)
+    }
+}
+
+@keyframes outLeft {
+    0% {
+        transform: translate3d(0,0,0)
+    }
+
+    to {
+        transform: translate3d(100%,0,0)
+    }
+}
+
+@keyframes outRight {
+    0% {
+        transform: translate3d(0,0,0)
+    }
+
+    to {
+        transform: translate3d(-100%,0,0)
+    }
+}
+
+@keyframes flipInY {
+    0% {
+        transform: scale(2);
+        filter: blur(10px);
+        opacity: 0
+    }
+
+    to {
+        transform: scale(1);
+        filter: blur(0);
+        opacity: 1
+    }
+}
+
+@keyframes goRight {
+    0% {
+        opacity: 0;
+        margin-right: -300px
+    }
+
+    to {
+        opacity: 1;
+        margin-right: 0
+    }
+}
+
+@keyframes goLeft {
+    0% {
+        opacity: 0;
+        margin-left: -300px
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0
+    }
+}
+
+@keyframes Bg-ZoomIn {
+    0%,to {
+        transform: scale3d(1,1,1)
+    }
+
+    50% {
+        transform: scale3d(1.2,1.5,1.2)
+    }
+};
+
+@keyframes showSVG {
+    0% {
+        transform: scale(1.2);
+        filter: blur(10px);
+        opacity: 0
+    }
+
+    to {
+        transform: none;
+        filter: none;
+        opacity: 1
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +188,38 @@
 html{
     font-size: 16px;
 }
+body,html{
+    animation-name: Start;
+    
+}
 .page-home{
     height: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.background{
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top:0;
+    overflow: hidden;
+}
+.banner-full-slides{
+    width: 100vw;
+    height: 100vh;
+    min-height: 80vh;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    transition: background-color .5s linear;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel-items{
+    animation-name:fadeIn ;
+    animation-duration: 2s;
 }
