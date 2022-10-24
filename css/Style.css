@@ -188,6 +188,7 @@ html{
     font-size: 16px;
 }
 body,html{
+    position: relative;
     animation-name: Start;
     
 }
@@ -208,14 +209,16 @@ body,html{
     overflow: hidden;
     
 }
+.Zoom-Out{
+    animation: Z;
+}
 .banner-slide{
-    display: flex;
+    display: none;
 }
 .bg-line{
-
-    background-image:url(/asset/Svg/p1b.svg);
+    background-image:url(/asset/Svg/p1b.svg) ;
     position: absolute;
-    z-index: 15;
+    z-index: 5;
 }
 .bg-line:nth-child(1){
     background-image:url(/asset/Svg/p1b.svg) ;
