@@ -226,8 +226,6 @@ body,html{
     width: 100%;
     height: 100%;
     display: none;
-
-
 }
 .bg-line{
     background-position: center;
@@ -242,6 +240,7 @@ body,html{
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
+
     
 }
 .banner-slide:nth-child(1) .bg-line{
@@ -289,6 +288,7 @@ body,html{
     align-self: center;
     transform: rotate(-25deg);
     transform-origin: 50% 50%;
+    
 }
 .pic-img,.slide-img {
     flex: none;

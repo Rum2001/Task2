@@ -33,7 +33,8 @@ function carousel() {
   slideIndex++;
   if (slideIndex > x.length) { slideIndex = 1 }
   y.style.backgroundColor = slideItems[slideIndex - 1].bgColor;
-  x[slideIndex - 1].style.display = "block";
+  x[slideIndex - 1].style.display = "flex";
+  x[slideIndex-1].classList.add("justify-content-center")
 
   setTimeout(carousel, 5000);
 }
