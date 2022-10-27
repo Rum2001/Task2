@@ -183,10 +183,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 html{
     font-size: 16px;
-}
+} 
 body,html{
     position: relative;
     animation-name: Start;
@@ -208,39 +208,42 @@ body,html{
     top:0;
     overflow: hidden;
     
-}
+} 
 .Zoom-Out{
     animation: Z;
-}
+} 
 .banner-slide{
     display: none;
+
 }
 .bg-line{
-    background-image:url(/asset/Svg/p1b.svg) ;
-    position: absolute;
+    background-image: url(/asset/Catalog-Mobile/10.jpg) ;
+    position: absolute; 
     z-index: 5;
+    width: 100%;
+    height: auto;
 }
-.bg-line:nth-child(1){
+.banner-slide:nth-child(1).bg-line{
     background-image:url(/asset/Svg/p1b.svg) ;
 }
-.bg-line:nth-child(2){
+.banner-slide:nth-child(2).bg-line{
     background-image: url(/asset/Svg/p2b.svg);
 }
-.bg-line:nth-child(3){
+.banner-slide:nth-child(3).bg-line{
     background-image: url(/asset/Svg/p3b.svg);
 }
-.bg-line:nth-child(4){
+.banner-slide:nth-child(4).bg-line{
     background-image: url(/asset/Svg/p4b.svg);
 }
-.bg-line:nth-child(5){
+.banner-slide:nth-child(5).bg-line{
     background-image: url(/asset/Svg/p5b.svg);
 }
-.bg-line:nth-child(6){
+.banner-slide:nth-child(6).bg-line{
     background-image: url(/asset/Svg/p6b.svg);
 }
-.bg-line:nth-child(7){
+.banner-slide:nth-child(7).bg-line{
     background-image: url(/asset/Svg/p7b.svg);
 }
-.bg-line:nth-child(8){
+.banner-slide:nth-child(8).bg-line{
     background-image: url(/asset/Svg/p8b.svg);
 }
