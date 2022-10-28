@@ -178,7 +178,6 @@
         opacity: 1
     }
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -336,18 +335,21 @@ body,html{
     overflow: hidden;
  
 }
-
 .slide-img-1,.slide-img-4 {
     width: calc(700/800*25vw);
     max-width: 655px;
 }
-
 .slide-img-2,.slide-img-3 {
     width: calc(1500/800*25vw);
     max-width: 1404px
 }
 
 .slide-img-1,.slide-img-3 {
+    transform: ;
+    animation-name: fadeLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
     margin-right: 1px
 }
 
@@ -366,8 +368,4 @@ body,html{
 .break {
     flex-basis: 100%;
     height: 0
-}
-.animate__animated .animate__fadeOutRight{
-    --animation-duration: 1s;
-    --animation-delay: 5s;
 }
