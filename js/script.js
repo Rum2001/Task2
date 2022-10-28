@@ -21,21 +21,21 @@ const slideItems = [{
 }
 ]
 var slideIndex = 0;
-var x = document.getElementsByClassName("banner-slide");
-var y = document.getElementById("bg-color");
+let x = document.getElementsByClassName("banner-slide");
+let y = document.getElementById("bg-color");
+let z=document.getElementsByClassName("pic-img");
 carousel();
 function carousel() {
   var i;
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-
+    x[i].style.display="none";
+    x[i].className = x[i].className.replace("slide-current", "");
   }
   slideIndex++;
-  if (slideIndex > x.length) { slideIndex = 1 }
+  if (slideIndex > x.length) { slideIndex = 1 };
   y.style.backgroundColor = slideItems[slideIndex - 1].bgColor;
-  x[slideIndex - 1].style.display = "flex";
-  x[slideIndex-1].classList.add("justify-content-center")
-
+  x[slideIndex-1].classList.add("slide-current");
+  x[slideIndex-1].style.display="flex";
   setTimeout(carousel, 5000);
 }
 
