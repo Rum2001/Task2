@@ -367,3 +367,7 @@ body,html{
     flex-basis: 100%;
     height: 0
 }
+.animate__animated .animate__fadeOutRight{
+    --animation-duration: 1s;
+    --animation-delay: 5s;
+}
