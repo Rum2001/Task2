@@ -8,7 +8,7 @@
     --color-bg6:#779273;
     --color-bg7:#e48f92;
     --color-bg8:#6dbcc5;
-};
+}
 @keyframes Start {
     0% {
         visibility: hidden
@@ -17,13 +17,13 @@
     to {
         visibility: visible
     }
-};
+}
 
 @keyframes Preloader {
     to {
         transform: rotate(360deg)
     }
-};
+}
 
 @keyframes fadeIn {
     0% {
@@ -33,7 +33,7 @@
     to {
         opacity: 1
     }
-};
+}
 
 @keyframes fadeOut {
     0%{
@@ -43,7 +43,7 @@
     to {
         opacity: 0
     }
-};
+}
 
 @keyframes Blur {
     0% {
@@ -53,7 +53,7 @@
     to {
         filter: blur(10px)
     }
-};
+}
 
 @keyframes StrokeAni {
     to {
@@ -66,13 +66,13 @@
         stroke-dashoffset: 0;
         stroke-dasharray: 800
     }
-};
+}
 
 @keyframes ScrollStroke {
     to {
         stroke-dashoffset: 0
     }
-};
+}
 
 @keyframes fadeInUp {
     0% {
@@ -84,20 +84,28 @@
         opacity: 1;
         transform: translate3d(0,0,0)
     }
-};
+}
 
-@keyframes fadeLeft {
-    0% {
+@keyframes fadeGoleft{
+    0%{
         opacity: 0;
-        transform: translate3d(100%,0,0)
+        transform: translate3d(100%,0,0);
     }
-
-    to {
+    to{
         opacity: 1;
-        transform: translate3d(0,0,0)
+        transform: translate3d(0,0,0);
     }
-};
-
+}
+@keyframes fadeGoRight{
+    0%{
+        opacity: 0;
+        transform: translate3d(-100%,0,0);
+    }
+    100%{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
 @keyframes outLeft {
     0% {
         transform: translate3d(0,0,0)
@@ -106,7 +114,7 @@
     to {
         transform: translate3d(100%,0,0)
     }
-};
+}
 
 @keyframes outRight {
     0% {
@@ -116,7 +124,7 @@
     to {
         transform: translate3d(-100%,0,0)
     }
-};
+}
 
 @keyframes flipInY {
     0% {
@@ -130,10 +138,10 @@
         filter: blur(0);
         opacity: 1
     }
-};
+}
 
 @keyframes goRight {
-    0% {
+    from {
         opacity: 0;
         margin-right: -300px
     }
@@ -343,14 +351,12 @@ body,html{
     width: calc(1500/800*25vw);
     max-width: 1404px
 }
-
+.slide-img-2,.slide-img-4{
+    animation:fadeGoleft 1s linear forwards 
+}
 .slide-img-1,.slide-img-3 {
-    transform: ;
-    animation-name: fadeLeft;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    margin-right: 1px
+    margin-right: 1px;
+    animation:fadeGoRight 1s linear forwards
 }
 
 .slide-img-1,.slide-img-2 {
