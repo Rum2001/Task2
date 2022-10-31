@@ -1,3 +1,4 @@
+
 const slideItems = [{
   bgColor: "var(--color-bg1)"
 },
@@ -39,4 +40,11 @@ function carousel() {
   setTimeout(carousel, 5000);
 }
 
+function openNav(){
+  var nav=document.querySelector(".navigation");
+  var click=document.getElementById("click-nav");
+  nav.classList.toggle("open-nav");
+  click.classList.toggle("open-click");
+
+}
 
