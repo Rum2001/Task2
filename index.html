@@ -12,12 +12,11 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="/css/Style.css">
-    <link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
     <title>BTQ Group</title>
 </head>
 
 <body>
-    <div class="nav-click" id="click-nav" onclick="openNav()" style="display: block; opacity:1;">
+    <div class="nav-click" id="click-nav" onclick="openNav" style="display: block; opacity:1;">
         <div class="block"></div>
         <div class="line"></div>
     </div>
@@ -30,34 +29,6 @@
             <div class="bg-nav b5"></div>
         </div>
     </div>
-    <div class="navigation">
-        <nav class="main-menu">
-            <div class="nav-item">
-                <a class="link-page" href="">Home</a>
-            </div>
-            <div class="nav-item">
-                <a class="link-page" href="">Lời ngỏ</a>
-            </div>
-            <div class="nav-item">
-                <a class="link-page" href="">Dịch Vụ</a>
-            </div>
-            <div class="nav-item">
-                <a class="link-page" href="">Khách hàng</a>
-            </div>
-            <div class="nav-item">
-                <a class="link-page" href="">Liên hệ</a>
-            </div>
-        </nav>
-    </div>
-    <script>
-        function openNav() {
-            var nav = document.getElementsByClassName("navigation");
-            var click = document.getElementById("click-nav");
-            nav.classList.toggle("open-nav");
-            click.classList.toggle("open-click");
-
-        }
-    </script>
     <div class="page-home">
         <div class="background">
             <div class="banner-full-slide " id="bg-color">
@@ -217,7 +188,12 @@
         </div>
     </div>
     <script src="/js/script.js"></script>
-    <script src="/node_modules/aos/dist/aos.js"></script>
+    <script>
+    import 'https://cdn.jsdelivr.net/npm/@theatre/browser-bundles@0.5.0-insiders.88df1ef/dist/core-and-studio.js'
+        // We can now access Theatre.core and Theatre.studio from here
+        const { core, studio } = Theatre
+
+        studio.initialize()</script>
 </body>
 
 </html>
