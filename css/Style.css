@@ -89,7 +89,7 @@
 @keyframes fadeGoleft{
     0%,to{
         opacity: 0;
-        transform: translate3d(100%,0,0);
+        transform: translate3d(50%,0,0);
     }
     100%{
         opacity: 1;
@@ -99,7 +99,7 @@
 @keyframes fadeGoRight{
     0%,to{
         opacity: 0;
-        transform: translate3d(-100%,0,0);
+        transform: translate3d(-50%,0,0);
     }
     100%{
         opacity: 1;
@@ -355,13 +355,6 @@ body,html{
 .slide-img-2,.slide-img-3 {
     width: calc(1500/800*25vw);
     max-width: 1404px
-}
-.slide-img-2,.slide-img-4{
-    animation:fadeGoleft .4s linear forwards 
-}
-.slide-img-1,.slide-img-3 {
-    margin-right: 1px;
-    animation:fadeGoRight .4s linear forwards
 }
 
 .slide-img-1,.slide-img-2 {

@@ -39,4 +39,7 @@ function carousel() {
   x[slideIndex-1].style.display="flex";
   setTimeout(carousel, 5000);
 }
-
+function cardPicture(){
+  $(".slide-current").children(".slide-img-wrap").children(".pic-img").toggleClass(".show")
+}
+cardPicture()

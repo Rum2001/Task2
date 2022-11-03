@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="/css/Style.css">
     <link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <title>BTQ Group</title>
 </head>
 
 <body>
-    <div class="nav-click" id="click-nav" onclick="openNav()" style="display: block; opacity:1;">
+    <div class="nav-click" id="click-nav" style="display: block; opacity:1;">
         <div class="block"></div>
         <div class="line"></div>
     </div>
@@ -50,13 +51,14 @@
         </nav>
     </div>
     <script>
-        function openNav() {
-            var nav = document.getElementsByClassName("navigation");
-            var click = document.getElementById("click-nav");
-            nav.classList.toggle("open-nav");
-            click.classList.toggle("open-click");
+        $(document).ready(function(){
+            $("#click-nav").click(function(){
+                $(".navigation").toggleClass("open-nav");
+                $(".nav-click").toggleClass("open-click");
+            })
+        })
 
-        }
+
     </script>
     <div class="page-home">
         <div class="background">
@@ -213,6 +215,13 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    setTimeout(function(){
+                        $(".slide-img-1").animate({
+                            height:"toggle"
+                        })
+                    },2000);
+                </script>
             </div>
         </div>
     </div>
