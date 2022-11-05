@@ -88,11 +88,11 @@
 
 @keyframes fadeGoleft{
     0%,to{
-        opacity: 0;
+        opacity: 1;
         transform: translate3d(70%,0,0);
     }
     100%{
-        opacity: 1;
+        opacity: 0;
         transform: translate3d(0,0,0);
     }
 }
@@ -324,7 +324,6 @@ body,html{
     align-self: center;
     transform: rotate(-25deg);
     transform-origin: 50% 50%;
-    overflow: hidden;
     
 }
 .pic-img,.slide-img {
@@ -601,4 +600,10 @@ nav{
 }
 .b5 {
     background-color: #477352;
+}
+.slide-img{
+   animation: fadeGoRight 1s  linear forwards 4s;
+}
+.show .slide-img{
+    animation: fadeGoleft 1s  linear forwards;
 }

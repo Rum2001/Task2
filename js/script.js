@@ -24,8 +24,10 @@ const slideItems = [{
 var slideIndex = 0;
 let x = document.getElementsByClassName("banner-slide");
 let y = document.getElementById("bg-color");
-let z=document.getElementsByClassName("pic-img");
+const slideShow=document.querySelectorAll(".banner-slide")
+const nextButton=
 carousel();
+
 function carousel() {
   var i;
   for (i = 0; i < x.length; i++) {
@@ -39,4 +41,23 @@ function carousel() {
   x[slideIndex-1].style.display="flex";
   setTimeout(carousel, 5000);
 }
+classShow();
+function classShow(){
+  slideShow.forEach(function(items,index){
+    const imgShow=items.querySelectorAll(".pic-img");
+    if(items.classList.contains("slide-current")){
+      imgShow.forEach(function(img){
+        img.classList.add("show")
+      })
+    }
+    else{
+      imgShow.forEach(function(img){
+        img.classList.remove("show")
+      })
+    }
+  })
+  setTimeout(classShow,5000);
+}
+function nextSlide(){
 
+}
